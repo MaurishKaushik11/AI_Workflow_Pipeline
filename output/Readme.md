@@ -22,3 +22,48 @@ A modular AI workflow pipeline that allows running various AI tasks with configu
 ```bash
 git clone https://github.com/MaurishKaushik11/AI_Workflow_Pipeline.git
 cd AI_Workflow_Pipeline
+Create a virtual environment
+
+bash
+Copy code
+python -m venv .venv
+# Activate it
+# Windows
+.venv\Scripts\activate
+# Linux/Mac
+source .venv/bin/activate
+Install dependencies
+
+bash
+Copy code
+pip install -r requirements.txt
+Set up environment variables
+
+Copy the template .env.example to .env:
+
+bash
+Copy code
+copy .env.example .env   # Windows
+cp .env.example .env     # Linux/Mac
+Fill in your own credentials and API keys in .env
+
+Note: Do not commit your .env or any secret files to GitHub.
+
+Run the pipeline
+
+bash
+Copy code
+python main.py
+Project Structure
+bash
+Copy code
+AI_Workflow_Pipeline/
+│
+├── credentials/           # Google Cloud service accounts (ignored by Git)
+├── modules/               # Pipeline modules
+├── .venv/                 # Python virtual environment (ignored by Git)
+├── .gitignore
+├── .env.example           # Template for environment variables
+├── main.py                # Entry point
+├── requirements.txt
+└── README.md
